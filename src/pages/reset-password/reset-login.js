@@ -1,34 +1,37 @@
 //export default () => {
-    const inputReset = document.querySelector("#esqueci");
-    inputReset.addEventListener('click', function() {
-        const resetPassaword = document.getElementById('main-login');
-        const template = `
-        <button class="back"><a href="index.html">Voltar</a></button>
-        <div class="ontop-login">
-        <img src="./img/logo/logo.png" alt="logo-dogTips">
-    </div>
-        <div class="card-login">
-        <div class="login">
-            <form>
-            <label for="reset-passaword">Para redefinir sua senha, informe o endereço de e-mail cadastrado: </label>
-             <input type="email" id="email" name="email" placeholder="name@hotmail.com">
-            <button type="submit" class="reset">Redefinir senha</button>
-        </form>
+const inputReset = document.querySelector("#clique-esqueceu");
+inputReset.addEventListener('click', function () {
+    const resetPassaword = document.getElementById('root');
+    const template = `
+    <button class="btn-voltar"><a href="index.html">Voltar</a></button>
+    <div class="tela-principal">
+      <div class="logo-tela">
+        <img src="./img/logo/logo.png" class="img-logo" alt="logo-dogTips">
+      </div>
+      <div class="estilo-card">
+        <form>
+          <label class="label-esqueceu-senha">Para redefinir sua senha, informe o endereço de e-mail cadastrado: </label>
+          <div class="input-card">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="E-mail" minlength="4" required />
           </div>
+          <button type="submit" class="btn-redefinir-senha">Redefinir senha</button>
+      </div>
+      </form>
+      <p id="msg-redefine-senha"></p>
     </div>
-    <p id="text-confirm-reset"></p>
         `
-        resetPassaword.innerHTML = template;
+    resetPassaword.innerHTML = template;
 
-        const buttonReset = document.querySelector(".reset");
-        buttonReset.addEventListener('click', function(e) {
-            e.preventDefault();
-    const textReset = document.querySelector("#text-confirm-reset");
-    textReset.innerHTML="Em breve, você receberá um e-mail com todas as instruções para redefinir sua senha."
-        }
-        );
+    const buttonReset = document.querySelector(".btn-redefinir-senha");
+    buttonReset.addEventListener('click', function (e) {
+        e.preventDefault();
+        const textReset = document.querySelector("#msg-redefine-senha");
+        textReset.innerHTML = "Em breve, você receberá um e-mail com todas as instruções para redefinir sua senha."
     }
     );
-   
+}
+);
+
 
 //}

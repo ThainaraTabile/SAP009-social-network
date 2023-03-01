@@ -1,3 +1,4 @@
+/*Geral*/
 * {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -5,96 +6,304 @@
 }
 
 html {
-height: 100vh;
+  background-color: var(--bege);
 }
 
 body {
-  background-image: url(./img/teste2.png);
-  background-size: cover;
+  background-image: url(./img/img-fundo/pagina_inicial_mobile.png);
+  background-size: 100% 650px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-repeat: no-repeat;
 }
 
-.form-content {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+:root {
+  --bege: #FEFAE0;
+  --nude: #F9EBC7; 
+  --marromclaro: #B99470; 
+  --laranja: #C4661F; 
+  --marrom:#783D19; 
 }
 
-#logo {
-width: 200px;
-padding: 0 50px;
-margin-top: 150px;
-margin-bottom: 25px;
+main {
+  padding: 0 0 53px 0;
 }
 
-.register {
-background-color: #F2E2C4;
-box-shadow: 0px 0px 12px #878181;
-margin: auto;
-border-radius: 10px;
-justify-content: center;
-align-items: center;
-padding: 0px 45px;
+.logo-tela > img {
+  width: 200px;
+  margin-top: 12px;
+  margin-bottom: 17px;
+
 }
 
-.input-field {
-background-color: #fff;
-width: 210px;
-padding: 12px;
-border-radius: 80px;
-margin: 25px 0;
-display: grid;
-grid-template-columns: 15% 85%;
+  .estilo-card {
+  color: var(--laranja);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 17px;
+  background-color: #F2E2C4; 
+  border-radius: 20px;
+  box-shadow: 0px 0px 12px #878181;
+  box-sizing: border-box;
+  }
+
+  .tela-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 20px;
+  }
+
+  h3 {
+    color: var(--bege);
+    display: inline-block;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .icon-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 20%;
+    cursor: pointer;
+    color:#C4661F;
+    }
+
+    button {
+      font-weight: bold;
+    }
+
+/*Tela Mobile*/
+.teste::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(-45deg, #783D19 0%, #783D19 100%);
+  bottom: 72%;
+  left: 50%;
+  width: 1500px;
+  height: 1500px;
+  transform: translateX(-50%);
+  right: initial;
+  top: initial;
+  border-radius: 50%;
+  z-index: -2;
 }
 
-.input-field i {  
-font-size: 20px;
-color:#C4661F;
+
+/*Página de Login*/ 
+
+.txt-novo-usuario {
+  color: var(--bege);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+  font-size: 14px;
+} 
+
+.input-card {
+  background-color: #fff;
+  width: 210px;
+  padding: 12px;
+  border-radius: 80px;
+  margin: 8px 0;
+  display: grid;
+  grid-template-columns: 15% 85%;
 }
 
-.input-field input {
-border-style: none;
-border: 0;
-outline: 0;
-padding: 0;
-font-size: 16px;
-color: #783d19;
+.input-card > input {
+  border-style: none;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #783d19;
 }
 
-.input-field input::placeholder {
-color: #783d19;
+.input-card i {
+  font-size: 20px;
+  color:#C4661F;
 }
 
-.btn-register {
-background-color: #783d19;
-border: 10px solid #783d19;
-padding: 0 10px;
-border-radius: 20px;
-color: #fefae0;
-margin: 0 55px 25px 55px;
-cursor: pointer;
+.btn-registrar {
+  width: 40%;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #783d19;
+  background: #F2E2C4;
+  cursor: pointer;
+  margin-top: 7px;
 }
 
-.text-social {
-display: flex;
-justify-content: center;
-align-items: center;
-color:#C4661F;
-margin-bottom: 25px;
+.btn-acessar {
+  background-color: #783d19;
+  border: 10px solid #783d19;
+  padding: 0 10px;
+  border-radius: 20px;
+  color: #fefae0;
+  cursor: pointer; 
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.icon-google {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-bottom: 25px;
-font-size: 25px;
-text-decoration: none;
-border-radius: 20%;
-cursor: pointer;
+.espaço-acessar{
+  margin: 5px;
+  justify-content: center;
+  text-align: center;
 }
 
-.social-network i {
-color:#C4661F;
+.texto-centralizado {
+  text-align: center;
 }
+
+  /*Página de Cadastro*/
+  
+  .cadastrar {
+  background-color: #F2E2C4;
+  margin: auto;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 45px;
+  }
+
+  .btn-entrar {
+    width: 40%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #783d19;
+    background: #F2E2C4;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-cadastrar {
+  background-color: #783d19;
+  border: 10px solid #783d19;
+  padding: 0 10px;
+  border-radius: 20px;
+  color: #fefae0;
+  cursor: pointer;
+  }
+  
+  .txt-entrar {
+    color: var(--bege);
+    text-align: center;
+    padding: 0px 5px 0px 5px;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .espaço-entrar {
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a {
+    color: currentColor
+  }
+
+  /*Ressetar Senha
+  * {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url(./img/img-fundo/pagina_inicial_mobile.png);
+    background-size: cover;
+    color: #BF5B21;
+  }
+  
+  .mainLogin {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ontop-login>img {
+    width: 50vw;
+    flex-direction: column;
+  }
+  
+  .card-reset {
+    background-color: #F2E2C4;
+    border-radius: 3rem;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  
+  label {
+    color: #BF5B21;
+    display: flex;
+    align-content: center;
+  }
+  
+  .form {
+    text-align: justify;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  p {
+    color: #BF5B21;
+    display: flex;
+    align-content: center;
+    display: inline-flex;
+  }
+  .reset-passaword {
+    display: flex;
+    align-content: center;
+  }
+  
+  .reset {
+    text-decoration: none;
+    color: #F2E2C4;
+    background-color: #733A19;
+    border-style: none;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
+  }
+  
+  button {
+    text-align: center;
+  }
+  
+  #text-confirm-reset {
+    text-align: center;
+    border-style: solid;
+    border-color: #733A19;
+    ;
+    border-radius: 10px;
+    margin: 1rem;
+  }
+*/ 
