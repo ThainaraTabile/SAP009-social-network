@@ -34,7 +34,7 @@ buttonRegister.addEventListener("click", function(){
                 <input type="password" id="password" placeholder="******" required/>
             </div>
             <div class="espaço-entrar">
-            <button type="submit" value="cadastrar" id="cadastrar" class="btn-cadastrar">Cadastrar</button>
+            <button type="submit" value="cadastrar" id="cadastrar" class="btn-cadastrar">CADASTRAR</button>
             </div>
             <p class="text-cadastro-google">Ou cadastre-se com o Google</p>
             <div class="cadastro-google"> 
