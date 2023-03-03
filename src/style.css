@@ -19,10 +19,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.main {
-  width: 100%;
-}
-
 :root {
   --bege: #FEFAE0;
   --nude: #F9EBC7; 
@@ -33,6 +29,7 @@ body {
 
 main {
   padding: 0 0 53px 0;
+  width: 100%;
 }
 
 .logo-tela > img {
