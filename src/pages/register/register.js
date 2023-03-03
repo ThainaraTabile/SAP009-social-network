@@ -6,6 +6,7 @@ buttonRegister.addEventListener("click", function(){
        <h3>Já possui cadastro?</h3>
         <p class="txt-entrar">Clique no botão abaixo e veja as últimas atualizações dos seus amigos.</p>
         <button class="btn-entrar"><a href="index.html">Entrar</a></button>
+        <img src="./img/illustrations/good_dogg.png" class="ilustracao-cadastro" alt="ilustração-cadastro">
     </div>
     <div class="tela-principal">
         <div class="logo-tela">
@@ -26,12 +27,12 @@ buttonRegister.addEventListener("click", function(){
             <label for="email">E-mail:</label>
             <div class="input-card">
                 <i class="fas fa-envelope"></i>
-                <input type="email" id="email" placeholder="nome@hotmail.com" minlength="4" required/>
+                <input type="email" id="email" placeholder="seuemail@dominio.com" minlength="4" required/>
             </div>
             <label for="password">Senha:</label>
             <div class="input-card">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="password" placeholder="******" required/>
+                <input type="password" id="password" placeholder="••••••" required/>
             </div>
             <div class="espaço-entrar">
             <button type="submit" value="cadastrar" id="cadastrar" class="btn-cadastrar">CADASTRAR</button>

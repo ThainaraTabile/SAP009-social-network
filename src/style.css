@@ -38,7 +38,7 @@ main {
 .logo-tela > img {
   width: 200px;
   margin-top: 16px;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
 
 }
 
@@ -69,6 +69,10 @@ main {
   padding: 10px 0px 10px 0px;
   }
 
+  .cadastro-google {
+    margin-top: 10px;
+  }
+
   .icon-google {
   display: flex;
   justify-content: center;
@@ -81,23 +85,6 @@ main {
 }
 
 
-/*Tela Mobile*/
-.teste::before {
-  content: "";
-  position: absolute;
-  background-image: linear-gradient(-45deg, #783D19 0%, #783D19 100%);
-  bottom: 72%;
-  left: 50%;
-  width: 1500px;
-  height: 1500px;
-  transform: translateX(-50%);
-  right: initial;
-  top: initial;
-  border-radius: 50%;
-  z-index: -2;
-}
-
-
 /*Página de Login*/ 
 
 .txt-novo-usuario {
@@ -107,12 +94,24 @@ main {
   font-size: 14px;
 } 
 
+.ilustracao-login {
+  display: none;
+}
+
+.ilustracao-cadastro {
+  display:none;
+}
+
+.ilustracao-redefinir-senha {
+  display: none;
+}
+
 .input-card {
   background-color: #fff;
   width: 210px;
   padding: 12px;
   border-radius: 80px;
-  margin: 8px 0;
+  margin: 10px 0;
   display: grid;
   grid-template-columns: 15% 85%;
 }
@@ -233,7 +232,7 @@ a {
   .logo-tela-redefinir > img {
     width: 200px;
     margin-top: 165px;
-    margin-bottom: 17px;
+    margin-bottom: 30px;
 }
   
   .btn-voltar {
@@ -248,14 +247,14 @@ a {
     color: #783d19;
     background: #F2E2C4;
     cursor: pointer;
-    margin-top: 7px;
-    margin-left: 5px;
+    margin-top: 25px;
+    margin-left: 25px;
   }
 
   .label-esqueceu-senha {
       color: #BF5B21;
       display: flex;
-      align-content: center;
+      text-align: center;
   }
 
   .btn-redefinir-senha {
@@ -286,4 +285,143 @@ a {
   .espaço-redefinir {
     justify-content: center;
     display: flex;
+}
+
+/*Ajustando para telas maiores*/
+@media screen and (min-width: 460px) {
+  .logo-tela > img {
+  margin-top: 50px;
+  }
+
+  .btn-registrar {
+    margin-top: 10px;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 842px) {
+  .btn-registrar {
+    margin-top: 20px;
+  }
+
+  .btn-entrar {
+    margin-top: 25px;
+  }
+
+  .txt-novo-usuario > p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: none;
+  }
+
+  html {
+    background-image: url(./img/img-fundo/pagina_login.png);
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .ilustracao-login {
+    display: block;
+    width: 530px;
+  }
+
+  .ilustracao-cadastro {
+    display: block;
+    width: 530px;
+    margin-top: 45px;
+  }
+
+  .ilustracao-redefinir-senha {
+    display: block;
+    width: 500px;
+    margin: 220px 0 0 80px;
+  }
+
+  h3 {
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+  }
+
+  .txt-novo-usuario > p {
+    font-size: 16px;
+    padding: 0 15px 0 15px;
+  }
+
+  .txt-entrar {
+    font-size: 16px;
+  }
+
+  .logo-tela > img {
+    margin: 100px 0 30px 0;
+    width: 260px;
+  }
+
+  .logo-tela-redefinir > img {
+    width: 260px;
+    margin: 30px 0 30px 0;
+  }
+
+  .estilo-card {
+    margin-right: 30px;
+  }
+
+  .estilo-card-redefir-senha {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .txt-novo-usuario > p {
+    padding: 0 20px 0 15px;
+  }
+
+  .ilustracao-login {
+    display: block;
+    width: 585px;
+    margin-left: 40px;
+  }
+
+  .ilustracao-cadastro {
+    display: block;
+    width: 585px;
+    margin-left: 40px;
+  }
+
+  .ilustracao-redefinir-senha {
+    display: block;
+    width: 500px;
+    margin: 220px 0 0 150px;
+  }
+
+  .logo-tela > img {
+    margin: 0 0 30px 0;
+    width: 320px;
+  }
+
+  .estilo-card {
+    padding: 20px 35px;
+  }
+
+  .logo-tela-redefinir > img {
+    width: 320px;
+    margin: 0 65px 30px 0;
+  }
+
+  .estilo-card-redefir-senha {
+    margin-right: 90px;
+    padding: 25px 20px;
+  }
 }

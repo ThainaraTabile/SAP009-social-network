@@ -7,7 +7,8 @@ const template = `
             experiências! Você poderá seguir todos seus amigos e fazer novos. 
             Além de registrar a vida do seu cão, você poderá acompanhar 
             a vida de outros cãezinhos e interagir nas publicações. </p>
-            <button class="btn-registrar">registre-se</button>
+        <button class="btn-registrar">registre-se</button>
+        <img src="./img/illustrations/social_update.png" class="ilustracao-login" alt="ilustração-login">
     </div>
         <div class="tela-principal">
         <div class="logo-tela">
@@ -18,12 +19,12 @@ const template = `
                 <label for="email">E-mail:</label>
                 <div class="input-card">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" placeholder="nome@hotmail.com" minlength="4" required/>
+                    <input type="email" id="email" placeholder="seuemail@dominio.com" minlength="4" required/>
                 </div>
                 <label for="password">Senha:</label>
                 <div class="input-card">
                     <i class="fas fa-lock"></i>
-                    <input type="password" id="password" placeholder="******" required/>
+                    <input type="password" id="password" placeholder="•••••••" required/>
                 </div>
                 <p class="texto-centralizado"> Esqueceu sua senha?</p> 
                 <p class="texto-centralizado"><a id="clique-esqueceu">Clique aqui!</a></p>

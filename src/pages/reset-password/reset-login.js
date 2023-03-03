@@ -3,7 +3,10 @@ const inputReset = document.querySelector("#clique-esqueceu");
 inputReset.addEventListener('click', function () {
     const resetPassaword = document.getElementById('root');
     const template = `
-    <button class="btn-voltar"><a href="index.html">Voltar</a></button>
+    <div class="txt-voltar">
+      <button class="btn-voltar"><a href="index.html">Voltar</a></button>
+      <img src="./img/illustrations/dog_pop.png" class="ilustracao-redefinir-senha" alt="ilustração-redefinir-senha">
+    </div>
     <div class="tela-principal">
       <div class="logo-tela-redefinir">
         <img src="./img/logo/logo.png" class="img-logo" alt="logo-dogTips">
@@ -13,7 +16,7 @@ inputReset.addEventListener('click', function () {
           <label class="label-esqueceu-senha">Para redefinir sua senha, informe o endereço de e-mail cadastrado: </label>
           <div class="input-card">
             <i class="fas fa-envelope"></i>
-            <input type="email" id="email" placeholder="E-mail" minlength="4" required />
+            <input type="email" id="email" placeholder="seuemail@dominio.com" minlength="4" required />
           </div>
           <div class="espaço-redefinir">
           <button type="submit" class="btn-redefinir-senha">REDEFINIR SENHA</button>
