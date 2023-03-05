@@ -48,6 +48,7 @@ export default () => {
         </div>
     `
     container.innerHTML = template;
+    // aqui estamos autenticando usuario com e-mail e senha (testar olhando console)
     const botaoLogin = container.querySelector(".btn-acessar");
     botaoLogin.addEventListener('click', async function (e) {
         e.preventDefault();
