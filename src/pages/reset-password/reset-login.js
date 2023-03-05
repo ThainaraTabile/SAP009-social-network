@@ -25,8 +25,15 @@ export default () => {
     <p id="msg-redefine-senha"></p>
   </div>
   </div>
-` 
-        container.innerHTML = template;
+`
+  container.innerHTML = template;
 
-        return container; 
+  const botaoRedefinir = container.querySelector('.btn-redefinir-senha');
+  botaoRedefinir.addEventListener('click', function (e) {
+    e.preventDefault();
+    const msgConfirmaRedefinicao = container.querySelector("#msg-redefine-senha");
+    msgConfirmaRedefinicao.innerHTML = "Em breve, você receberá um e-mail com todas as instruções para redefinir sua senha."
+  });
+
+  return container;
 }

@@ -14,15 +14,15 @@ export default () => {
       </div>
       <div class="estilo-card">
      <form>
-         <label for="nometutor">Nome do tutor:</label>
+         <label for="nome-tutor">Nome do tutor:</label>
          <div class="input-card">
              <i class="fas fa-user"></i>
-             <input type="text" id="nometutor" placeholder="Seu nome" minlength="3" required/>
+             <input type="text" id="nome-tutor" placeholder="Seu nome" minlength="3" required/>
          </div>
-         <label for="nomecao">Nome do Cão:</label>
+         <label for="nome-cao">Nome do Cão:</label>
          <div class="input-card">
              <i class="fas fa-paw"></i>
-             <input type="text" id="nomecao" placeholder="Nome do cãozinho" minlength="3" required/> 
+             <input type="text" id="nome-cao" placeholder="Nome do cãozinho" minlength="3" required/> 
          </div>
          <label for="email">E-mail:</label>
          <div class="input-card">
@@ -35,7 +35,7 @@ export default () => {
              <input type="password" id="password" placeholder="******" required/>
          </div>
          <div class="espaço-entrar">
-         <button type="submit" value="cadastrar" id="cadastrar" class="btn-cadastrar">CADASTRAR</button>
+         <button type="submit" value="cadastrar" id="cadastrar" class="btn-cadastrar" onclick="cadastrar()">CADASTRAR</button>
          </div>
          <p class="text-cadastro-google">Ou cadastre-se com o Google</p>
          <div class="cadastro-google"> 

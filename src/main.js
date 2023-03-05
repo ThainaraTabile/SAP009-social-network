@@ -6,25 +6,34 @@ const main = document.querySelector("#root")
 const init = () => {
     window.addEventListener("hashchange", () => {
         main.innerHTML = "";
-        switch(window.location.hash) {
+        switch (window.location.hash) {
             case " ":
-            main.appendChild(login());
-            break;
+                main.appendChild(login());
+                break;
             case "#login":
-            main.appendChild(login());
-            break;
+                main.appendChild(login());
+                break;
             case "#reset":
-            main.appendChild(reset());
-            break;
+                main.appendChild(reset());
+                break;
             case "#register":
-            main.appendChild(register());
-            break;      
+                main.appendChild(register());
+                break;
         }
     })
 }
 
 window.addEventListener("load", () => {
-main.appendChild(login());
-init()
+    main.appendChild(login());
+    init()
 })
+// para requisitar preenchimento de dados corretos no input
+const camposDoFormulario = document.querySelectorAll("[required]");
+camposDoFormulario.forEach((campo) => {
+    campo.addEventListener("blur", () => verificaCampo(campo));
+});
+
+function verificaCampo(campo) {
+
+}
 
