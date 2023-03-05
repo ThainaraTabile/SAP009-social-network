@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
     main.appendChild(login());
     init()
 })
-// para requisitar preenchimento de dados corretos no input
+// para requisitar preenchimento de dados corretos no input.
 const camposDoFormulario = document.querySelectorAll("[required]");
 camposDoFormulario.forEach((campo) => {
     campo.addEventListener("blur", () => verificaCampo(campo));

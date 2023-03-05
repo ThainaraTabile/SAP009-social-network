@@ -27,7 +27,7 @@ export default () => {
   </div>
 `
   container.innerHTML = template;
-
+//msg confirmação de pedido redefinição de senha
   const botaoRedefinir = container.querySelector('.btn-redefinir-senha');
   botaoRedefinir.addEventListener('click', function (e) {
     e.preventDefault();
