@@ -1,6 +1,7 @@
 import register from "./pages/register/register.js";
 import login from "./pages/login/login.js";
 import reset from "./pages/reset-password/reset-login";
+import feed from "./pages/feed/feed";
 
 const main = document.querySelector("#root")
 const init = () => {
@@ -19,6 +20,8 @@ const init = () => {
             case "#register":
                 main.appendChild(register());
                 break;
+            case "#feed":
+            main.appendChild(feed());    
         }
     })
 }

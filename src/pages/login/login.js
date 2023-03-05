@@ -1,3 +1,6 @@
+import { autenticarUsuario } from "../../firebase/firebase";
+import { redirecionarPagina } from "../../redirecionar-pagina"
+
 export default () => {
     const container = document.createElement("div")
     const template = `
@@ -27,7 +30,7 @@ export default () => {
                         <label for="password">Senha:</label>
                         <div class="input-card">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="password" placeholder="******" required/>
+                            <input type="password" id="senha" placeholder="******" required/>
                         </div>
                         <p class="texto-centralizado"> Esqueceu sua senha?</p> 
                         <p class="texto-centralizado"><a href="#reset"id="clique-esqueceu">Clique aqui!</a></p>
@@ -43,8 +46,23 @@ export default () => {
                 </div>
             </div>
         </div>
-    ` 
+    `
     container.innerHTML = template;
-
-    return container; 
+    const botaoLogin = container.querySelector(".btn-acessar");
+    botaoLogin.addEventListener('click', async function (e) {
+        e.preventDefault();
+        const email = container.querySelector("#email").value;
+        const senha = container.querySelector("#senha").value;
+        try{
+            console.log("autenticando usuario")
+            await autenticarUsuario(email,senha);
+            console.log("usuario autenticado")
+            redirecionarPagina('#feed')    
+        }catch(error){
+            console.log("usuario ou senha invalido")
+            console.log(error)
+        }
+    }
+    )
+    return container;
 }
