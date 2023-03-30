@@ -81,6 +81,10 @@ h3 {
   color: #C4661F;
 }
 
+.img-logo-feed {
+  margin-top: 30px;
+  width: 250px;
+}
 
 /*Página de Login*/
 
@@ -113,7 +117,7 @@ h3 {
   grid-template-columns: 15% 85%;
 }
 
-.input-card>input {
+label > input {
   border-style: none;
   border: 0;
   outline: 0;
@@ -163,8 +167,11 @@ h3 {
   text-align: center;
 }
 
-a {
-  cursor: pointer;
+.mensagem-erro {
+  text-align: center;
+  color: #5F6F52;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 /*Página de Cadastro*/
@@ -205,7 +212,6 @@ a {
 .txt-entrar {
   color: var(--bege);
   text-align: center;
-  padding: 0px 5px 0px 5px;
   font-size: 15px;
   padding: 10px;
 }
@@ -216,19 +222,25 @@ a {
   text-align: center;
 }
 
+a {
+  color: currentColor;
+  cursor: pointer;
+}
+
 a:link {
   text-decoration: none;
 }
 
-a {
-  color: currentColor
-}
 .mensagem-vazia {
   text-align: center;
   color: #5F6F52;
   margin-bottom: 10px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.text-cadastro-google {
+  text-align: center;
 }
 
 /*Ressetar Senha*/
@@ -291,145 +303,17 @@ a {
   display: flex;
 }
 
-/*Ajustando para telas maiores*/
-@media screen and (min-width: 460px) {
-  .logo-tela>img {
-    margin-top: 50px;
-  }
-
-  .btn-registrar {
-    margin-top: 10px;
-  }
-
-  h3 {
-    margin-top: 10px;
-  }
+.msg-email-redefinir-senha {
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@media screen and (min-width: 842px) {
-  .btn-registrar {
-    margin-top: 20px;
-  }
-
-  .btn-entrar {
-    margin-top: 25px;
-  }
-
-  .txt-novo-usuario>p {
-    font-size: 16px;
-  }
+.msg-redefine-senha {
+  color: #BF5B21;
+  display: flex;
+  text-align: center;
 }
-
-@media screen and (min-width: 1000px) {
-  body {
-    background-image: none;
-  }
-
-  html {
-    background-image: url(./img/img-fundo/pagina_login.png);
-    min-height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .main {
-    display: grid;
-    grid-template-columns: 60% 40%;
-  }
-
-  .ilustracao-login {
-    display: block;
-    width: 530px;
-  }
-
-  .ilustracao-cadastro {
-    display: block;
-    width: 530px;
-    margin-top: 45px;
-  }
-
-  .ilustracao-redefinir-senha {
-    display: block;
-    width: 500px;
-    margin: 220px 0 0 80px;
-  }
-
-  h3 {
-    margin: 20px 0 20px 0;
-    font-size: 20px;
-  }
-
-  .txt-novo-usuario>p {
-    font-size: 16px;
-    padding: 0 15px 0 15px;
-  }
-
-  .txt-entrar {
-    font-size: 16px;
-  }
-
-  .logo-tela>img {
-    margin: 100px 0 30px 0;
-    width: 260px;
-  }
-
-  .logo-tela-redefinir>img {
-    width: 260px;
-    margin: 30px 0 30px 0;
-  }
-
-  .estilo-card {
-    margin-right: 30px;
-  }
-
-  .estilo-card-redefir-senha {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .txt-novo-usuario>p {
-    padding: 0 20px 0 15px;
-  }
-
-  .ilustracao-login {
-    display: block;
-    width: 585px;
-    margin-left: 40px;
-  }
-
-  .ilustracao-cadastro {
-    display: block;
-    width: 585px;
-    margin-left: 40px;
-  }
-
-  .ilustracao-redefinir-senha {
-    display: block;
-    width: 500px;
-    margin: 220px 0 0 150px;
-  }
-
-  .logo-tela>img {
-    margin: 0 0 30px 0;
-    width: 320px;
-  }
-
-  .estilo-card {
-    padding: 20px 35px;
-  }
-
-  .logo-tela-redefinir>img {
-    width: 320px;
-    margin: 0 65px 30px 0;
-  }
-
-  .estilo-card-redefir-senha {
-    margin-right: 90px;
-    padding: 25px 20px;
-  }
-}
-
 /*FEED*/
 
 .barra-feed {
@@ -472,17 +356,23 @@ i#burguer {
 #itens{
   background-color: var(--bege);
   z-index: 9999;
-  height: 12vh;
-  width: 40%;
+  /* height: 12vh; */
+  width: 22%;
   padding: 15px;
   text-align: center;
   text-transform: uppercase;
   color: var(--laranja);
   font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 ul{
   list-style: none;
+}
+
+.barra-itens {
+  padding-bottom: 10px;
 }
 
 .cao {
@@ -498,17 +388,23 @@ ul{
 .perfil {
     display: inline-flex;
     gap: 30px;
-    margin-left: 120px;
+    justify-content: center;
 }
+
 .div-postagem-tutor{
   flex-direction: column;
   display: flex;
+ align-items: flex-end;
  }
+ 
  .texto-tutor{
   background-color: var(--nude);
   border-style: none;
   border-radius: 20px;
+  padding: 10px;
+  resize: none;
  }
+
  .btn-publicar{
   text-transform: uppercase;
   background-color: #783d19;
@@ -518,43 +414,70 @@ ul{
   cursor: pointer;
   width: 30%;
   margin-top: 5px;
-  margin-left: 220px;
  }
+
  .div-postagem-anteriores-tutor{
   background-color: var(--nude);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
  }
+
  #icone-superiores{
-  display: inline-flex;
+  display: grid;
   margin-top: 4px;
   margin-left: 4px;
+  grid-template-columns: 11% 62% 22%;
  }
+
  .icon-usuario-txt{
   color:var(--marrom);
+  margin-right: 8px;
  }
+
  .tutor-txt-area{
-  color: var(--laranja);
-  font-size: 15px
+  color: var(--marrom);
+  font-size: 15px;
+  font-weight: bold;
  }
+
  .data-postagem{
- color: var(--laranja);
+ color: var(--marrom);
  font-size: 15px;
- margin-left: 170px;
+ font-weight: bold;
  }
+
  textarea{
   color: grey;
   margin: 4px;
   padding: 5px;
  }
+
  .texto-tutor-postado{
-  padding: 5px;
+  color: var(--laranja);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 17px;
   background-color: var(--nude);
-  border-style: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  border: none;
  }
+
+ .postagens{
+  display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+
  #icones-inferiores{
   display: inline-flex;
   margin-top: 4px;
@@ -564,4 +487,437 @@ ul{
   margin-left: 50px;
   margin-right: 50px;
  }
+
+ .alerta-publicacao {
+  text-align: center;
+  color: #5F6F52;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+ }
  
+ .info-usuario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+textarea:focus {
+  outline: 0;
+}
+  .btn-deletar {
+    border: 0;
+    background-color: #F9EBC7;
+    color: #783D19;
+    cursor: pointer;
+  }
+
+  .fa-solid, .fas {
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.caixa-deletar {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  overflow: auto;
+  background-color: #783d19;
+  border-radius: 25px;
+  display: none;
+  width: 300px;
+ }
+
+.modal {
+  background-color: #f9ebc7;
+  margin: 35px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.txt-excluir {
+  font-weight: bold;
+  margin-bottom: 20px;
+} 
+
+.btn-excluir {
+  background-color: #783d19;
+  border: 10px solid #783d19;
+  border-radius: 20px;
+  color: #fefae0;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 45%;
+}
+
+.btn-cancelar {
+  background-color: #783d19;
+  border: 10px solid #783d19;
+  border-radius: 20px;
+  color: #fefae0;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 50%;
+}
+
+.btn-editar {
+  border: 0;
+  background-color: #F9EBC7;
+  color: #783D19;
+  cursor: pointer;
+}
+
+.btn-curtir > img {
+  width: 20px;
+}
+
+.btn-curtir {
+  border: 0;
+  background-color: #F9EBC7;
+  color: #783D19;
+  cursor: pointer;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.numero-curtidas {
+  display: inline-block;
+  border: 0;
+  background-color: #F9EBC7;
+  color: #783D19;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.texto-tutor-postado:focus {
+  border: 1px solid var(--laranja);
+}
+
+/*Página Sobre*/
+.info-rede-social > p {
+  padding: 0 15px 0 15px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.img-logo-sobre {
+  width: 250px;
+  margin-top: 80px;
+}
+
+.txt-devs {
+  color: var(--laranja);
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.img-ana, .img-paola, .img-thai, .img-tieta, .img-juca, .img-luigi {
+  width: 125px;
+}
+
+.card-ana, .card-paola, .card-thai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 17px;
+  background-color: #F2E2C4;
+  border-radius: 20px;
+  margin: 35px 0 25px 0;
+  box-shadow: 0px 0px 12px #878181;
+  box-sizing: border-box;
+}
+
+.img-ana-tieta, .img-paola-juca, .img-thai-luigi {
+  margin-bottom: 15px;
+}
+
+.tutora-ana, .cadela-tieta, .tutora-paola, .cachorro-juca, .tutora-thai, .cachorro-luigi {
+  color: var(--laranja);
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.img-linkedin, .img-github {
+  margin-top: 10px;
+  width: 60px;
+}
+
+.tela-principal-sobre, .cards-devs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0 20px;
+}
+
+.txt-devs-desktop {
+  display: none;
+}
+
+.nome-cao{
+  background-color: var(--nude);
+  border-style: none;
+  border-radius: 20px;
+  color: var(--laranja);
+  border: 5px solid var(--nude);
+}
+
+#nome-cao::placeholder{
+  color: var(--marrom);
+}
+
+.btn-salvar-nome-cao{
+  background-color: var(--marrom);
+  color: var(--bege);
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 5px solid var(--marrom);
+  border-radius: 20px;
+  width: 50%;
+  margin-top: 10px;
+}
+
+/*Ajustando para telas maiores*/
+@media screen and (min-width: 1200px) {
+  .txt-novo-usuario>p {
+    padding: 0 20px 0 15px;
+  }
+
+  .ilustracao-login {
+    display: block;
+    width: 585px;
+    margin-left: 40px;
+  }
+
+  .ilustracao-cadastro {
+    display: block;
+    width: 585px;
+    margin-left: 40px;
+  }
+
+  .ilustracao-redefinir-senha {
+    display: block;
+    width: 500px;
+    margin: 179px 0 0 80px;
+  }
+
+  .logo-tela>img {
+    margin: 0 0 30px 0;
+    width: 320px;
+  }
+
+  .estilo-card {
+    padding: 20px 35px;
+  }
+
+  .logo-tela-redefinir>img {
+    width: 320px;
+    margin: 0 65px 30px 0;
+  }
+
+  .estilo-card-redefir-senha {
+    padding: 25px 20px;
+  }
+
+  .img-logo-feed {
+    width: 235px;
+  }
+
+  .texto-tutor {
+    width: 100%;
+  }
+
+  #info-rede-social > p {
+    margin-left: 5px;
+    padding: 0 40px 0 40px;
+   }
+  
+  #img-logo-sobre {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+   background-image: none;
+   overflow: hidden;
+ }
+
+ .principal {
+   width: 100vw;
+   height: 100vh;
+   background-image: url(./img/img-fundo/pagina_login.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: auto;
+ }
+ 
+ html {
+   min-height: 100%;
+ }
+
+ .main {
+   display: grid;
+   grid-template-columns: 60% 40%;
+ }
+
+ .ilustracao-login {
+   display: block;
+   width: 530px;
+ }
+
+ .ilustracao-cadastro {
+   display: block;
+   width: 530px;
+   margin-top: 45px;
+ }
+
+ .ilustracao-redefinir-senha {
+   display: block;
+   width: 500px;
+   margin: 179px 0 0 80px;
+ }
+
+ h3 {
+   margin: 20px 0 20px 0;
+   font-size: 20px;
+ }
+
+ .txt-novo-usuario>p {
+   font-size: 16px;
+   padding: 0 15px 0 15px;
+ }
+
+ .txt-entrar {
+   font-size: 16px;
+ }
+
+ .logo-tela>img {
+   margin-left: 50px;
+   width: 260px;
+ }
+
+ .logo-tela-redefinir>img {
+   width: 260px;
+   margin: 30px 0 30px 60px;
+ }
+
+ .estilo-card {
+   margin-left: 13px;
+ }
+
+ .estilo-card-redefir-senha {
+   margin-left: 35px;
+ }
+
+ .info-usuario {
+   margin-right: 380px;
+ }
+
+ .texto-tutor {
+   resize:none;
+   margin-top: 129px;
+ }
+
+ .div-postagem-anteriores-tutor {
+   width: 600px;
+}
+
+ .img-logo-feed {
+   margin: 0px -5000px 0px 210px;
+   width: 236px;
+   margin-top: -111px;
+   margin-bottom: 30px;
+ }
+
+ #icone-superiores {
+   display: grid;
+   margin-top: 4px;
+   margin-left: 4px;
+   grid-template-columns: 7% 53% 40%;
+ }
+
+ .postagens {
+   display: grid;
+   justify-items: center;
+   align-items: center;
+ }
+
+ .img-logo-sobre {
+  margin-left: 85px;
+ }
+
+ .info-rede-social > p {
+  margin-left: 63px;
+ }
+
+ #cards-devs {
+  display: flex;
+  flex-direction: row;
+ }
+
+ #card-ana, #card-paola {
+  margin-right: 30px;
+ }
+ 
+ .txt-devs {
+  display: none;
+ }
+
+ #txt-devs-desktop {
+  display: block;
+  margin: 50px 0 50px 137px;
+  font-size: 25px;
+ }
+
+ #nome-cao{
+  background-color: var(--bege);
+  border: 5px solid var(--bege);
+ }
+
+ #btn-salvar-nome-cao{
+  background-color: var(--nude);
+  border: 5px solid var(--nude);
+  color: var(--marrom);
+  font-weight: bolder;
+ }
+}
+
+@media screen and (min-width: 842px) {
+  .btn-registrar {
+    margin-top: 20px;
+  }
+
+  .btn-entrar {
+    margin-top: 25px;
+  }
+
+  .txt-novo-usuario>p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .logo-tela>img {
+    margin-top: 50px;
+  }
+
+  .btn-registrar {
+    margin-top: 10px;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+}
+
